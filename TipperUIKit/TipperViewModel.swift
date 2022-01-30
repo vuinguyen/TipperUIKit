@@ -42,5 +42,26 @@ enum TipPercent: Float, segmentedControl {
 
 
 class TipperViewModel {
+    func getBillAmount(billText: String = "") -> Float {
+        var billAmount = billText
+        let nonNumerals: Set<Character> = ["$"]
+        billAmount.removeAll(where: { nonNumerals.contains($0) })
+        return NSString(string: billAmount).floatValue
+    }
 
+    func getTipAmount(tipPercent: TipPercent, billAmount: Float) -> Float {
+        return billAmount * tipPercent.rawValue
+    }
+
+    func getTipAmountString(tipAmount: Float) -> String {
+        return "$\(tipAmount)"
+    }
+
+    func getBillTotal() {
+
+    }
+
+    func getBillTotalString() {
+
+    }
 }

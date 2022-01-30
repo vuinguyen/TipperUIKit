@@ -63,14 +63,25 @@ class TipperViewController: UIViewController {
         }
 
         print("segment selected: \(tipPercent.description)")
-        calculateBillTotal()
+        updateDisplay()
     }
 
     private func updateDisplay() {
-        // grab tip percentage
         // grab bill amount
-        // calculate tip amount
+        guard let billText = billAmountTextField.text,
+        billText != "",
+        billText != "." else {
+            clearTipAmountBillTotal()
+            return
+        }
+        let billAmount = tipperViewModel.getBillAmount(billText: billText)
+
+        // grab tip percentage and calculate tip amount
+        let tipAmount = tipperViewModel.getTipAmount(tipPercent: tipPercent, billAmount: billAmount)
+
         // display tip amount
+        tipAmountValueLabel.text = tipperViewModel.getTipAmountString(tipAmount: tipAmount)
+
         // calculate bill total
         // display bill total
     }
@@ -78,11 +89,17 @@ class TipperViewController: UIViewController {
     private func calculateBillTotal() {
         
     }
+
+    private func clearTipAmountBillTotal() {
+        tipAmountValueLabel.text = ""
+        billTotalValueLabel.text = ""
+    }
 }
 
 extension TipperViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         print("Typing: \(String(describing: textField.text))")
+        updateDisplay()
     }
 }
 
