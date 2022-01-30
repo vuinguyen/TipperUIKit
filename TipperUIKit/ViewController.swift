@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var billAmountTextField: UITextField!
 
     @IBOutlet var tipPercentLabel: UILabel!
-    @IBOutlet var tipPercentSegmentControl: UISegmentedControl!
+    @IBOutlet var tipPercentSegmentedControl: UISegmentedControl!
 
     @IBOutlet var tipAmountTextLabel: UILabel!
     @IBOutlet var tipAmountValueLabel: UILabel!
@@ -21,14 +21,19 @@ class ViewController: UIViewController {
     @IBOutlet var billTotalTextLabel: UILabel!
     @IBOutlet var billTotalValueLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setFonts()
-        configureTextField()
-        billAmountTextField.delegate = self
+    @IBAction func tipPercentageChanged(_ sender: Any) {
+
     }
 
-    private func setFonts() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        billAmountTextField.delegate = self
+        configureFonts()
+        configureSegmentedControl()
+        configureTextField()
+    }
+
+    private func configureFonts() {
         billAmountLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         billAmountTextField.font = UIFont.preferredFont(forTextStyle: .title2)
         tipPercentLabel.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -38,12 +43,22 @@ class ViewController: UIViewController {
         billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
     }
 
+    private func configureSegmentedControl() {
+        tipPercentSegmentedControl.addTarget(self, action: #selector(self.tipPercentChanged), for: .valueChanged)
+    }
+
     private func configureTextField() {
         billAmountTextField.becomeFirstResponder()
+    }
+
+    @objc func tipPercentChanged() {
+        print("segmentControl changed!")
     }
 }
 
 extension ViewController: UITextFieldDelegate {
-
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        print("Typing: \(String(describing: textField.text))")
+    }
 }
 

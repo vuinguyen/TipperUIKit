@@ -60,6 +60,9 @@
                                                     <segment title="25%"/>
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" red="0.2627450980392157" green="0.45882352941176469" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="tipPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OaS-c2-9sv"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
@@ -86,13 +89,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Te-Mro">
-                                                <rect key="frame" x="0.0" y="15" width="108.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="15" width="96" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mu-dX-ozc">
-                                                <rect key="frame" x="108.5" y="0.0" width="305.5" height="50"/>
+                                                <rect key="frame" x="96" y="0.0" width="318" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -104,13 +107,13 @@
                                         <rect key="frame" x="0.0" y="60" width="414" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bill Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-dD-KSW">
-                                                <rect key="frame" x="0.0" y="15" width="67.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="15" width="67" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-MH-y8Y">
-                                                <rect key="frame" x="67.5" y="0.0" width="346.5" height="50"/>
+                                                <rect key="frame" x="67" y="0.0" width="347" height="50"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -144,7 +147,7 @@
                         <outlet property="tipAmountTextLabel" destination="aaI-Te-Mro" id="ycL-uo-4QH"/>
                         <outlet property="tipAmountValueLabel" destination="6Mu-dX-ozc" id="7Hz-Jg-91I"/>
                         <outlet property="tipPercentLabel" destination="mrG-Rs-2JM" id="Sa9-8C-bhR"/>
-                        <outlet property="tipPercentSegmentControl" destination="DpC-5Z-mRT" id="zlb-OE-cGb"/>
+                        <outlet property="tipPercentSegmentedControl" destination="DpC-5Z-mRT" id="zlb-OE-cGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
