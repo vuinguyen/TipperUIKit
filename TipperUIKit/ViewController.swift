@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet var tipPercentLabel: UILabel!
     @IBOutlet var tipPercentSegmentControl: UISegmentedControl!
 
+    @IBOutlet var tipAmountTextLabel: UILabel!
+    @IBOutlet var tipAmountValueLabel: UILabel!
+
+    @IBOutlet var billTotalTextLabel: UILabel!
+    @IBOutlet var billTotalValueLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +29,12 @@ class ViewController: UIViewController {
 
     private func setFonts() {
         billAmountLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        billAmountTextField.font = UIFont.preferredFont(forTextStyle: .title2)
         tipPercentLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        tipAmountTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
     }
 }
 

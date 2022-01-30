@@ -129,7 +129,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fxM-PC-0vt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KEV-kD-fy8"/>
-                            <constraint firstItem="fxM-PC-0vt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Md7-Ma-XOX"/>
                             <constraint firstItem="2GG-r0-e1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U9a-F1-UYR"/>
                             <constraint firstItem="2GG-r0-e1g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XKz-2c-PT0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxM-PC-0vt" secondAttribute="trailing" id="Y4f-lL-j1q"/>
@@ -140,6 +139,10 @@
                     <connections>
                         <outlet property="billAmountLabel" destination="OIa-Be-JqN" id="QQ2-b4-Ant"/>
                         <outlet property="billAmountTextField" destination="b9g-U1-EaI" id="oqE-Wo-YNe"/>
+                        <outlet property="billTotalTextLabel" destination="90e-dD-KSW" id="xe1-F2-WlW"/>
+                        <outlet property="billTotalValueLabel" destination="w75-MH-y8Y" id="cgp-h3-3Bd"/>
+                        <outlet property="tipAmountTextLabel" destination="aaI-Te-Mro" id="ycL-uo-4QH"/>
+                        <outlet property="tipAmountValueLabel" destination="6Mu-dX-ozc" id="7Hz-Jg-91I"/>
                         <outlet property="tipPercentLabel" destination="mrG-Rs-2JM" id="Sa9-8C-bhR"/>
                         <outlet property="tipPercentSegmentControl" destination="DpC-5Z-mRT" id="zlb-OE-cGb"/>
                     </connections>
