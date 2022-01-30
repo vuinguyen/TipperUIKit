@@ -40,7 +40,6 @@ enum TipPercent: Float, segmentedControl {
     }
 }
 
-
 class TipperViewModel {
     func getBillAmount(billText: String = "") -> Float {
         var billAmount = billText

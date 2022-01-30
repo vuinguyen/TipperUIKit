@@ -46,6 +46,7 @@ class TipperViewController: UIViewController {
         tipPercentSegmentedControl.addTarget(self, action: #selector(self.tipPercentChanged), for: .valueChanged)
     }
 
+    // make Bill Amount text field focus by default
     private func configureTextField() {
         billAmountTextField.becomeFirstResponder()
     }
@@ -67,11 +68,11 @@ class TipperViewController: UIViewController {
     }
 
     private func updateDisplay() {
-        // grab bill amount
+        // get bill amount value from textfield
         guard let billText = billAmountTextField.text,
         billText != "",
         billText != "." else {
-            clearTipAmountBillTotal()
+            clearDisplay()
             return
         }
         let billAmount = tipperViewModel.getBillAmount(billText: billText)
@@ -89,11 +90,7 @@ class TipperViewController: UIViewController {
         billTotalValueLabel.text = tipperViewModel.getBillTotalString(billAmount: billTotal)
     }
 
-    private func calculateBillTotal() {
-        
-    }
-
-    private func clearTipAmountBillTotal() {
+    private func clearDisplay() {
         tipAmountValueLabel.text = ""
         billTotalValueLabel.text = ""
     }
