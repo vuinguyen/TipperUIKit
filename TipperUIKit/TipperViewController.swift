@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TipperViewController: UIViewController {
 
     @IBOutlet var billAmountLabel: UILabel!
     @IBOutlet var billAmountTextField: UITextField!
@@ -21,9 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet var billTotalTextLabel: UILabel!
     @IBOutlet var billTotalValueLabel: UILabel!
 
-    @IBAction func tipPercentageChanged(_ sender: Any) {
-
-    }
+    var tipPercent: TipPercent = .fifteen
+    let tipperViewModel = TipperViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +51,36 @@ class ViewController: UIViewController {
     }
 
     @objc func tipPercentChanged() {
-        print("segmentControl changed!")
+        switch tipPercentSegmentedControl.selectedSegmentIndex {
+        case TipPercent.fifteen.controlIndex:
+            tipPercent = .fifteen
+        case TipPercent.twenty.controlIndex:
+            tipPercent = .twenty
+        case TipPercent.twentyfive.controlIndex:
+            tipPercent = .twentyfive
+        default:
+            tipPercent = .fifteen
+        }
+
+        print("segment selected: \(tipPercent.description)")
+        calculateBillTotal()
+    }
+
+    private func updateDisplay() {
+        // grab tip percentage
+        // grab bill amount
+        // calculate tip amount
+        // display tip amount
+        // calculate bill total
+        // display bill total
+    }
+
+    private func calculateBillTotal() {
+        
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension TipperViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         print("Typing: \(String(describing: textField.text))")
     }
