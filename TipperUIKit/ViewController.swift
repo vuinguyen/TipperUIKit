@@ -23,8 +23,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setFonts()
+        configureTextField()
+        billAmountTextField.delegate = self
     }
 
     private func setFonts() {
@@ -36,5 +37,13 @@ class ViewController: UIViewController {
         billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
     }
+
+    private func configureTextField() {
+        billAmountTextField.becomeFirstResponder()
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+
 }
 
