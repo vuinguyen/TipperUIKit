@@ -63,9 +63,9 @@ class TipperViewModel {
         return billAmount + tipAmount
     }
 
-    func getBillTotalString(billAmount: Float) -> String {
+    func getBillTotalString(billTotal: Float) -> String {
         // round to 2 decimal places for display
-        let roundedValue = round(billAmount * 100) / 100.0
+        let roundedValue = round(billTotal * 100) / 100.0
         return "$\(roundedValue)"
     }
 }
