@@ -91,8 +91,8 @@ class TipperViewController: UIViewController {
     }
 
     private func clearDisplay() {
-        tipAmountValueLabel.text = ""
-        billTotalValueLabel.text = ""
+        tipAmountValueLabel.text = "$0.00"
+        billTotalValueLabel.text = "$0.00"
     }
 }
 
