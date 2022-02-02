@@ -79,19 +79,19 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-PK-A4e" userLabel="Tip Amount View">
-                                <rect key="frame" x="0.0" y="276.5" width="414" height="54"/>
+                                <rect key="frame" x="0.0" y="276.5" width="414" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-7J-APz" userLabel="Tip Amount Stack View">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="54"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Te-Mro">
-                                                <rect key="frame" x="0.0" y="17" width="247.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="25" width="247.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mu-dX-ozc">
-                                                <rect key="frame" x="247.5" y="16.5" width="126.5" height="21.5"/>
+                                                <rect key="frame" x="247.5" y="24.5" width="126.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -103,17 +103,17 @@
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.92549019607843142" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KEJ-7J-APz" secondAttribute="trailing" constant="20" id="Fem-Fz-ffh"/>
-                                    <constraint firstAttribute="height" secondItem="6Mu-dX-ozc" secondAttribute="height" multiplier="2.5" id="bIr-io-EIX"/>
+                                    <constraint firstAttribute="height" secondItem="6Mu-dX-ozc" secondAttribute="height" multiplier="3.25" id="bIr-io-EIX"/>
                                     <constraint firstItem="KEJ-7J-APz" firstAttribute="centerY" secondItem="9gf-PK-A4e" secondAttribute="centerY" id="dcM-v0-bfo"/>
                                     <constraint firstItem="KEJ-7J-APz" firstAttribute="leading" secondItem="9gf-PK-A4e" secondAttribute="leading" constant="20" id="n8X-4I-1WL"/>
                                     <constraint firstItem="KEJ-7J-APz" firstAttribute="top" secondItem="9gf-PK-A4e" secondAttribute="top" id="ndR-a0-q0q"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Qx-6Ek" userLabel="Bill Total View">
-                                <rect key="frame" x="0.0" y="330.5" width="414" height="67"/>
+                                <rect key="frame" x="0.0" y="346.5" width="414" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-ly-Jl2" userLabel="Bill Total Stack View">
-                                        <rect key="frame" x="20" y="16.5" width="374" height="33.5"/>
+                                        <rect key="frame" x="20" y="25" width="374" height="33.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bill Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-dD-KSW">
                                                 <rect key="frame" x="0.0" y="6.5" width="169.5" height="20.5"/>
@@ -133,7 +133,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.92549019607843142" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" secondItem="Kgh-ly-Jl2" secondAttribute="height" multiplier="2" id="K3r-RY-RVg"/>
+                                    <constraint firstAttribute="height" secondItem="Kgh-ly-Jl2" secondAttribute="height" multiplier="2.5" id="K3r-RY-RVg"/>
                                     <constraint firstItem="Kgh-ly-Jl2" firstAttribute="centerY" secondItem="jqa-Qx-6Ek" secondAttribute="centerY" id="Wm0-1P-4dv"/>
                                     <constraint firstItem="Kgh-ly-Jl2" firstAttribute="leading" secondItem="jqa-Qx-6Ek" secondAttribute="leading" constant="20" id="pCD-88-u41"/>
                                     <constraint firstAttribute="trailing" secondItem="Kgh-ly-Jl2" secondAttribute="trailing" constant="20" id="wUl-tP-b8p"/>
