@@ -37,7 +37,7 @@ class TipperViewController: UIViewController {
         billAmountTextField.font = UIFont.preferredFont(forTextStyle: .title2)
         tipPercentLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         tipAmountTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
         billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
     }
