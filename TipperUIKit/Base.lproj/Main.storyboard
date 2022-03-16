@@ -110,19 +110,19 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Qx-6Ek" userLabel="Bill Total View">
-                                <rect key="frame" x="0.0" y="407" width="414" height="72.5"/>
+                                <rect key="frame" x="0.0" y="407" width="414" height="92.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-ly-Jl2" userLabel="Bill Total Stack View">
-                                        <rect key="frame" x="20" y="21.5" width="374" height="29"/>
+                                        <rect key="frame" x="20" y="27.5" width="374" height="37"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bill Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-dD-KSW">
-                                                <rect key="frame" x="0.0" y="4.5" width="184.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="8.5" width="184.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-MH-y8Y">
-                                                <rect key="frame" x="184.5" y="0.0" width="189.5" height="29"/>
+                                                <rect key="frame" x="184.5" y="4" width="189.5" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -139,17 +139,28 @@
                                     <constraint firstAttribute="trailing" secondItem="Kgh-ly-Jl2" secondAttribute="trailing" constant="20" id="wUl-tP-b8p"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-Gr-XK3" userLabel="Divider View">
+                                <rect key="frame" x="5" y="405" width="404" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="2E7-Pz-5kk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9gf-PK-A4e" firstAttribute="top" secondItem="2GG-r0-e1g" secondAttribute="bottom" constant="30" id="2t5-xQ-dMm"/>
-                            <constraint firstItem="jqa-Qx-6Ek" firstAttribute="top" secondItem="9gf-PK-A4e" secondAttribute="bottom" id="FC9-Tc-8M4"/>
+                            <constraint firstAttribute="trailing" secondItem="Nn1-Gr-XK3" secondAttribute="trailing" constant="5" id="DOe-6j-nru"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jqa-Qx-6Ek" secondAttribute="bottom" constant="362.5" id="ICK-Vq-PtN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gf-PK-A4e" secondAttribute="trailing" id="O98-Gl-4ZK"/>
+                            <constraint firstItem="Nn1-Gr-XK3" firstAttribute="top" secondItem="9gf-PK-A4e" secondAttribute="bottom" constant="-2" id="PsJ-Nt-6zB"/>
                             <constraint firstItem="2GG-r0-e1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="4:3" id="U9a-F1-UYR"/>
+                            <constraint firstItem="Nn1-Gr-XK3" firstAttribute="bottom" secondItem="jqa-Qx-6Ek" secondAttribute="top" id="Uq7-7R-fJP"/>
                             <constraint firstItem="2GG-r0-e1g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XKz-2c-PT0"/>
                             <constraint firstItem="jqa-Qx-6Ek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zd3-ov-X0U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2GG-r0-e1g" secondAttribute="trailing" constant="20" id="hiG-g9-S1a"/>
+                            <constraint firstItem="Nn1-Gr-XK3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="iOy-aa-1nY"/>
                             <constraint firstItem="9gf-PK-A4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pRu-Ee-MHm"/>
                             <constraint firstItem="jqa-Qx-6Ek" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t8f-M1-KFH"/>
                         </constraints>
