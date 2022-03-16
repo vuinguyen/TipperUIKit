@@ -38,8 +38,10 @@ class TipperViewController: UIViewController {
         tipPercentLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         tipAmountTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        tipAmountValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
         billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        billTotalValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
     }
 
     private func configureSegmentedControl() {
