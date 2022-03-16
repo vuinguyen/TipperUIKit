@@ -12,14 +12,6 @@ class TipperUIKitTests: XCTestCase {
 
     let tipperViewModel = TipperViewModel()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testGetBillAmount() throws {
         let billText = "10.50"
         let billAmount = Float(10.50)
@@ -63,12 +55,4 @@ class TipperUIKitTests: XCTestCase {
         let billAmount = Float(23.0)
         XCTAssertEqual(tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billAmount), "$28.75")
     }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
