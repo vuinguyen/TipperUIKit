@@ -37,9 +37,11 @@ class TipperViewController: UIViewController {
         billAmountTextField.font = UIFont.preferredFont(forTextStyle: .title2)
         tipPercentLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         tipAmountTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        tipAmountValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
         billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        billTotalValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
     }
 
     private func configureSegmentedControl() {
@@ -78,16 +80,16 @@ class TipperViewController: UIViewController {
         let billAmount = tipperViewModel.getBillAmount(billText: billText)
 
         // calculate tip amount
-        let tipAmount = tipperViewModel.getTipAmount(tipPercent: tipPercent, billAmount: billAmount)
+        _ = tipperViewModel.getTipAmount(tipPercent: tipPercent, billAmount: billAmount)
 
         // display tip amount
-        tipAmountValueLabel.text = tipperViewModel.getTipAmountString(tipAmount: tipAmount)
+        tipAmountValueLabel.text = tipperViewModel.getTipAmountStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
 
         // calculate bill total
         let billTotal = tipperViewModel.getBillTotal(tipPercent: tipPercent, billAmount: billAmount)
 
         // display bill total
-        billTotalValueLabel.text = tipperViewModel.getBillTotalString(billTotal: billTotal)
+        billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billTotal)
     }
 
     private func clearDisplay() {
