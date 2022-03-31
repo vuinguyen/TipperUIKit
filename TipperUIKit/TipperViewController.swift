@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TipperViewController: UIViewController {
 
@@ -21,6 +22,11 @@ class TipperViewController: UIViewController {
     @IBOutlet var billTotalTextLabel: UILabel!
     @IBOutlet var billTotalValueLabel: UILabel!
 
+    // Use SwiftUI view to display the tip amount
+    @IBSegueAction func tipAmountView(_ coder: NSCoder) -> UIViewController? {
+        UIHostingController(coder: coder, rootView: CalculatedAmountView(amountLabel: "Tip Amount", amount: "$0.00"))
+    }
+    
     var tipPercent: TipPercent = .fifteen
     let tipperViewModel = TipperViewModel()
 
