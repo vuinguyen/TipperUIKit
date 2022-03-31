@@ -86,10 +86,10 @@ class TipperViewController: UIViewController {
         tipAmountValueLabel.text = tipperViewModel.getTipAmountStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
 
         // calculate bill total
-        let billTotal = tipperViewModel.getBillTotal(tipPercent: tipPercent, billAmount: billAmount)
+        _ = tipperViewModel.getBillTotal(tipPercent: tipPercent, billAmount: billAmount)
 
         // display bill total
-        billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billTotal)
+        billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
     }
 
     private func clearDisplay() {
