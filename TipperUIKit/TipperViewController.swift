@@ -24,10 +24,9 @@ class TipperViewController: UIViewController {
 
     // Use SwiftUI view to display the tip amount
     @IBSegueAction func tipAmountView(_ coder: NSCoder) -> UIViewController? {
-        UIHostingController(coder: coder, rootView: CalculatedAmountView(amountLabel: "Tip Amount", amount: "$0.00"))
+        UIHostingController(coder: coder, rootView: CalculatedAmountView(viewModel: tipperViewModel, calculatedAmountType: CalculatedAmountType.tipAmount))
     }
     
-    var tipPercent: TipPercent = .fifteen
     let tipperViewModel = TipperViewModel()
 
     override func viewDidLoad() {
@@ -62,16 +61,16 @@ class TipperViewController: UIViewController {
     @objc func tipPercentChanged() {
         switch tipPercentSegmentedControl.selectedSegmentIndex {
         case TipPercent.fifteen.controlIndex:
-            tipPercent = .fifteen
+            tipperViewModel.tipPercent = .fifteen
         case TipPercent.twenty.controlIndex:
-            tipPercent = .twenty
+            tipperViewModel.tipPercent = .twenty
         case TipPercent.twentyfive.controlIndex:
-            tipPercent = .twentyfive
+            tipperViewModel.tipPercent = .twentyfive
         default:
-            tipPercent = .fifteen
+            tipperViewModel.tipPercent = .fifteen
         }
 
-        print("segment selected: \(tipPercent.description)")
+        print("segment selected: \(tipperViewModel.tipPercent.description)")
         updateDisplay()
     }
 
@@ -83,19 +82,19 @@ class TipperViewController: UIViewController {
             clearDisplay()
             return
         }
-        let billAmount = tipperViewModel.getBillAmount(billText: billText)
+        tipperViewModel.billAmount = tipperViewModel.getBillAmount(billText: billText)
 
         // calculate tip amount
-        _ = tipperViewModel.getTipAmount(tipPercent: tipPercent, billAmount: billAmount)
+        _ = tipperViewModel.getTipAmount(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
 
         // display tip amount
-        tipAmountValueLabel.text = tipperViewModel.getTipAmountStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
+        tipAmountValueLabel.text = tipperViewModel.getTipAmountStringFormatted(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
 
         // calculate bill total
-        _ = tipperViewModel.getBillTotal(tipPercent: tipPercent, billAmount: billAmount)
+        _ = tipperViewModel.getBillTotal(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
 
         // display bill total
-        billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
+        billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
     }
 
     private func clearDisplay() {

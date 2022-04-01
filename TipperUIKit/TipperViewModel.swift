@@ -40,7 +40,15 @@ enum TipPercent: Float, segmentedControl {
     }
 }
 
-class TipperViewModel {
+enum CalculatedAmountType: String {
+    case tipAmount = "Tip Amount"
+    case billTotal = "Bill Total"
+}
+
+class TipperViewModel: ObservableObject {
+    @Published var tipPercent: TipPercent = .fifteen
+    @Published var billAmount = Float(0.0)
+    
     let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
         formatter.numberStyle = .currency

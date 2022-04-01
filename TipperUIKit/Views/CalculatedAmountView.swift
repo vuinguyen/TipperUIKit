@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct CalculatedAmountView: View {
-    let amountLabel: String
-    let amount: String
+    @ObservedObject var viewModel: TipperViewModel
+    let calculatedAmountType: CalculatedAmountType
 
     var body: some View {
+        let amountLabel = calculatedAmountType.rawValue
+        let tipPercent = viewModel.tipPercent
+        let billAmount = viewModel.billAmount
+        let amount = calculatedAmountType == .tipAmount ?
+        viewModel.getTipAmountStringFormatted(tipPercent: tipPercent, billAmount: billAmount) :
+        viewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
+        
         HStack(alignment: .center) {
             Text(amountLabel)
                 .primaryStyle()
@@ -29,6 +36,6 @@ struct CalculatedAmountView: View {
 
 struct CalculatedAmountView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatedAmountView(amountLabel: "Tip Amount", amount: "$0.00")
+        CalculatedAmountView(viewModel: TipperViewModel(), calculatedAmountType: .tipAmount)
     }
 }
