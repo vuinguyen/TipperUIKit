@@ -16,11 +16,17 @@ class TipperViewController: UIViewController {
     @IBOutlet var tipPercentLabel: UILabel!
     @IBOutlet var tipPercentSegmentedControl: UISegmentedControl!
 
+    // Note: BEGIN: These outlets can be now be removed,
+    // along with their components on the storyboard, at anytime
+    
     @IBOutlet var tipAmountTextLabel: UILabel!
     @IBOutlet var tipAmountValueLabel: UILabel!
 
     @IBOutlet var billTotalTextLabel: UILabel!
     @IBOutlet var billTotalValueLabel: UILabel!
+     
+    // Note: END: These outlets can be now be removed,
+    // along with their components on the storyboard, at anytime
 
     // Use SwiftUI view to display the tip amount
     @IBSegueAction func tipAmountView(_ coder: NSCoder) -> UIViewController? {
@@ -46,12 +52,16 @@ class TipperViewController: UIViewController {
         billAmountLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         billAmountTextField.font = UIFont.preferredFont(forTextStyle: .title2)
         tipPercentLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        tipAmountTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
-        tipAmountValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
-        billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
-        billTotalValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
+        // Note: These lines of code are no longer needed since these properties
+        // are now set in CalculatedAmountView
+        /*
+         tipAmountTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+         tipAmountValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+         tipAmountValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
+         billTotalTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+         billTotalValueLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+         billTotalValueLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
+         */
     }
 
     private func configureSegmentedControl() {
@@ -84,28 +94,39 @@ class TipperViewController: UIViewController {
         guard let billText = billAmountTextField.text,
         billText != "",
         billText != "." else {
-            clearDisplay()
+            // clearDisplay()
             return
         }
         tipperViewModel.billAmount = tipperViewModel.getBillAmount(billText: billText)
-
-        // calculate tip amount
-        _ = tipperViewModel.getTipAmount(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
-
-        // display tip amount
-        tipAmountValueLabel.text = tipperViewModel.getTipAmountStringFormatted(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
-
-        // calculate bill total
-        _ = tipperViewModel.getBillTotal(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
-
-        // display bill total
-        billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
+        
+        // Now that tipPercent and billAmount are published properties that the
+        // CalculatedAmountView is observing changes to,
+        // and because we replaced the tip amount and bill total
+        // UI components with CalculatedAmountView, the rest of the code
+        // in updateDisplay() is now unneeded and can be removed at anytime
+        /*
+         // calculate tip amount
+         _ = tipperViewModel.getTipAmount(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
+         
+         // display tip amount
+         tipAmountValueLabel.text = tipperViewModel.getTipAmountStringFormatted(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
+         
+         // calculate bill total
+         _ = tipperViewModel.getBillTotal(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
+         
+         // display bill total
+         billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipperViewModel.tipPercent, billAmount: tipperViewModel.billAmount)
+         */
     }
 
-    private func clearDisplay() {
-        tipAmountValueLabel.text = "$0.00"
-        billTotalValueLabel.text = "$0.00"
-    }
+    // Note: This function is no longer needed since these components
+    // are now updated in CalculatedAmountView
+    /*
+     private func clearDisplay() {
+     tipAmountValueLabel.text = "$0.00"
+     billTotalValueLabel.text = "$0.00"
+     }
+     */
 }
 
 extension TipperViewController: UITextFieldDelegate {
