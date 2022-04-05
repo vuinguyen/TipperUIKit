@@ -27,6 +27,11 @@ class TipperViewController: UIViewController {
         UIHostingController(coder: coder, rootView: CalculatedAmountView(viewModel: tipperViewModel, calculatedAmountType: CalculatedAmountType.tipAmount))
     }
     
+    // Use SwiftUI view to display the bill total
+    @IBSegueAction func billTotalView(_ coder: NSCoder) -> UIViewController? {
+        UIHostingController(coder: coder, rootView: CalculatedAmountView(viewModel: tipperViewModel, calculatedAmountType: CalculatedAmountType.billTotal))
+    }
+    
     let tipperViewModel = TipperViewModel()
 
     override func viewDidLoad() {

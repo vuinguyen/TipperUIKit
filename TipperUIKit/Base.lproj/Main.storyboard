@@ -119,16 +119,22 @@
                                 <rect key="frame" x="0.0" y="440.5" width="414" height="72.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-ly-Jl2" userLabel="Bill Total Stack View">
-                                        <rect key="frame" x="20" y="22" width="374" height="29"/>
+                                        <rect key="frame" x="0.0" y="-27.5" width="414" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bill Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-dD-KSW">
-                                                <rect key="frame" x="0.0" y="4" width="184.5" height="20.5"/>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qql-aE-BMO">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <connections>
+                                                    <segue destination="OiH-p8-XUy" kind="embed" destinationCreationSelector="billTotalView:" id="0C5-7T-dk9"/>
+                                                </connections>
+                                            </containerView>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bill Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-dD-KSW">
+                                                <rect key="frame" x="414" y="53.5" width="0.0" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-MH-y8Y">
-                                                <rect key="frame" x="184.5" y="0.0" width="189.5" height="29"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-MH-y8Y">
+                                                <rect key="frame" x="414" y="49.5" width="0.0" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -141,8 +147,8 @@
                                 <constraints>
                                     <constraint firstItem="Kgh-ly-Jl2" firstAttribute="centerY" secondItem="jqa-Qx-6Ek" secondAttribute="centerY" id="Wm0-1P-4dv"/>
                                     <constraint firstAttribute="height" secondItem="w75-MH-y8Y" secondAttribute="height" multiplier="2.5" id="i7G-Bz-9oS"/>
-                                    <constraint firstItem="Kgh-ly-Jl2" firstAttribute="leading" secondItem="jqa-Qx-6Ek" secondAttribute="leading" constant="20" id="pCD-88-u41"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kgh-ly-Jl2" secondAttribute="trailing" constant="20" id="wUl-tP-b8p"/>
+                                    <constraint firstItem="Kgh-ly-Jl2" firstAttribute="leading" secondItem="jqa-Qx-6Ek" secondAttribute="leading" id="pCD-88-u41"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kgh-ly-Jl2" secondAttribute="trailing" id="wUl-tP-b8p"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-Gr-XK3" userLabel="Divider View">
@@ -192,12 +198,27 @@
                     <view key="view" contentMode="scaleToFill" id="QVo-vf-GQG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3Sr-Lt-vfg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-Tf-3QC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="929" y="70"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="83s-W3-dFN">
+            <objects>
+                <viewController id="OiH-p8-XUy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aKn-UV-KZz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-EB-Epq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="240"/>
         </scene>
     </scenes>
     <resources>
