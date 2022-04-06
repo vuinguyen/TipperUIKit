@@ -79,29 +79,17 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-PK-A4e" userLabel="Tip Amount View">
-                                <rect key="frame" x="0.0" y="312.5" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="312.5" width="414" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-7J-APz" userLabel="Tip Amount Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FD7-Wu-DZi" userLabel="Tip Amount Container View">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                                 <connections>
                                                     <segue destination="YOA-au-fl5" kind="embed" destinationCreationSelector="tipAmountView:" id="pAb-RL-Y7t"/>
                                                 </connections>
                                             </containerView>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Te-Mro">
-                                                <rect key="frame" x="414" y="54" width="0.0" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mu-dX-ozc">
-                                                <rect key="frame" x="414" y="38.5" width="0.0" height="51.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.89411764705882346" green="0.92549019607843142" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
@@ -109,17 +97,17 @@
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.92549019607843142" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KEJ-7J-APz" secondAttribute="trailing" id="Fem-Fz-ffh"/>
-                                    <constraint firstAttribute="height" secondItem="6Mu-dX-ozc" secondAttribute="height" multiplier="2.5" id="bIr-io-EIX"/>
+                                    <constraint firstAttribute="height" constant="75" id="bsV-KS-keb"/>
                                     <constraint firstItem="KEJ-7J-APz" firstAttribute="centerY" secondItem="9gf-PK-A4e" secondAttribute="centerY" id="dcM-v0-bfo"/>
                                     <constraint firstItem="KEJ-7J-APz" firstAttribute="leading" secondItem="9gf-PK-A4e" secondAttribute="leading" id="n8X-4I-1WL"/>
                                     <constraint firstItem="KEJ-7J-APz" firstAttribute="top" secondItem="9gf-PK-A4e" secondAttribute="top" id="ndR-a0-q0q"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Qx-6Ek" userLabel="Bill Total View">
-                                <rect key="frame" x="0.0" y="440.5" width="414" height="72.5"/>
+                                <rect key="frame" x="0.0" y="387.5" width="414" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-ly-Jl2" userLabel="Bill Total Stack View">
-                                        <rect key="frame" x="0.0" y="-27.5" width="414" height="128"/>
+                                        <rect key="frame" x="0.0" y="-26.5" width="414" height="128"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qql-aE-BMO">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -127,32 +115,20 @@
                                                     <segue destination="OiH-p8-XUy" kind="embed" destinationCreationSelector="billTotalView:" id="0C5-7T-dk9"/>
                                                 </connections>
                                             </containerView>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bill Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-dD-KSW">
-                                                <rect key="frame" x="414" y="53.5" width="0.0" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <color key="textColor" red="0.1960784314" green="0.2274509804" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-MH-y8Y">
-                                                <rect key="frame" x="414" y="49.5" width="0.0" height="29"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.89411764705882346" green="0.92549019607843142" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.92549019607843142" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Wg5-dm-Wxk"/>
                                     <constraint firstItem="Kgh-ly-Jl2" firstAttribute="centerY" secondItem="jqa-Qx-6Ek" secondAttribute="centerY" id="Wm0-1P-4dv"/>
-                                    <constraint firstAttribute="height" secondItem="w75-MH-y8Y" secondAttribute="height" multiplier="2.5" id="i7G-Bz-9oS"/>
                                     <constraint firstItem="Kgh-ly-Jl2" firstAttribute="leading" secondItem="jqa-Qx-6Ek" secondAttribute="leading" id="pCD-88-u41"/>
                                     <constraint firstAttribute="trailing" secondItem="Kgh-ly-Jl2" secondAttribute="trailing" id="wUl-tP-b8p"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-Gr-XK3" userLabel="Divider View">
-                                <rect key="frame" x="5" y="439.5" width="404" height="1"/>
+                                <rect key="frame" x="5" y="386.5" width="404" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="2E7-Pz-5kk"/>
@@ -179,10 +155,6 @@
                     <connections>
                         <outlet property="billAmountLabel" destination="OIa-Be-JqN" id="QQ2-b4-Ant"/>
                         <outlet property="billAmountTextField" destination="b9g-U1-EaI" id="oqE-Wo-YNe"/>
-                        <outlet property="billTotalTextLabel" destination="90e-dD-KSW" id="xe1-F2-WlW"/>
-                        <outlet property="billTotalValueLabel" destination="w75-MH-y8Y" id="cgp-h3-3Bd"/>
-                        <outlet property="tipAmountTextLabel" destination="aaI-Te-Mro" id="ycL-uo-4QH"/>
-                        <outlet property="tipAmountValueLabel" destination="6Mu-dX-ozc" id="7Hz-Jg-91I"/>
                         <outlet property="tipPercentLabel" destination="mrG-Rs-2JM" id="Sa9-8C-bhR"/>
                         <outlet property="tipPercentSegmentedControl" destination="DpC-5Z-mRT" id="zlb-OE-cGb"/>
                     </connections>
@@ -196,7 +168,7 @@
             <objects>
                 <viewController id="YOA-au-fl5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVo-vf-GQG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3Sr-Lt-vfg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -213,6 +185,7 @@
                     <view key="view" contentMode="scaleToFill" id="aKn-UV-KZz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0SV-JV-0Js"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>

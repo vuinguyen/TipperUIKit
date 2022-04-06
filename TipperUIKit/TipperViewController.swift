@@ -19,11 +19,11 @@ class TipperViewController: UIViewController {
     // Note: BEGIN: These outlets can be now be removed,
     // along with their components on the storyboard, at anytime
     
-    @IBOutlet var tipAmountTextLabel: UILabel!
-    @IBOutlet var tipAmountValueLabel: UILabel!
-
-    @IBOutlet var billTotalTextLabel: UILabel!
-    @IBOutlet var billTotalValueLabel: UILabel!
+    // @IBOutlet var tipAmountTextLabel: UILabel!
+    // @IBOutlet var tipAmountValueLabel: UILabel!
+    
+    // @IBOutlet var billTotalTextLabel: UILabel!
+    // @IBOutlet var billTotalValueLabel: UILabel!
      
     // Note: END: These outlets can be now be removed,
     // along with their components on the storyboard, at anytime
