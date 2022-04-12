@@ -86,12 +86,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521B42FA2805E32900ACB626 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				529D201727A5889500793317 /* TipperViewController.swift */,
+				521B42F62804BE1200ACB626 /* GenerosityViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		521B42FB2805E34900ACB626 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				529D204327A6FAB600793317 /* TipperViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		524ABB8C27F3B28E00FF37D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */,
+				529D201927A5889500793317 /* Main.storyboard */,
 				521B42F428049CDA00ACB626 /* GenerosityView.storyboard */,
-				521B42F62804BE1200ACB626 /* GenerosityViewController.swift */,
+				524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,12 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				524ABB8C27F3B28E00FF37D5 /* Views */,
+				521B42FA2805E32900ACB626 /* ViewControllers */,
+				521B42FB2805E34900ACB626 /* ViewModels */,
 				524ABB8F27F3B4BC00FF37D5 /* Extensions */,
 				529D201327A5889500793317 /* AppDelegate.swift */,
 				529D201527A5889500793317 /* SceneDelegate.swift */,
-				529D204327A6FAB600793317 /* TipperViewModel.swift */,
-				529D201727A5889500793317 /* TipperViewController.swift */,
-				529D201927A5889500793317 /* Main.storyboard */,
 				529D201C27A5889600793317 /* Assets.xcassets */,
 				529D201E27A5889600793317 /* LaunchScreen.storyboard */,
 				529D202127A5889600793317 /* Info.plist */,
