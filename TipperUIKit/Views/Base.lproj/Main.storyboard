@@ -166,6 +166,7 @@
                     <connections>
                         <outlet property="billAmountLabel" destination="OIa-Be-JqN" id="QQ2-b4-Ant"/>
                         <outlet property="billAmountTextField" destination="b9g-U1-EaI" id="oqE-Wo-YNe"/>
+                        <outlet property="generosityButton" destination="PHJ-Lq-eR1" id="SPl-7p-wGP"/>
                         <outlet property="tipPercentLabel" destination="mrG-Rs-2JM" id="Sa9-8C-bhR"/>
                         <outlet property="tipPercentSegmentedControl" destination="DpC-5Z-mRT" id="zlb-OE-cGb"/>
                     </connections>

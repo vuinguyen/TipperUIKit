@@ -17,9 +17,14 @@ class GenerosityViewController: UIViewController {
     @IBOutlet weak var imageSegmentedControl: UISegmentedControl!
     
     var imageSelected = ImageSelected.one
+    var defaultSelectedSegmentIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let index = defaultSelectedSegmentIndex {
+            imageSegmentedControl.selectedSegmentIndex = index
+            imageSelectedChanged()
+        }
         configureSegmentedControl()
     }
     

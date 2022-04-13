@@ -16,8 +16,11 @@ class TipperViewController: UIViewController {
     @IBOutlet var tipPercentLabel: UILabel!
     @IBOutlet var tipPercentSegmentedControl: UISegmentedControl!
 
+    @IBOutlet weak var generosityButton: UIButton!
+    
     @IBAction func displayGenerosityLevel(_ sender: Any) {
         let generosityViewController = UIStoryboard(name: "GenerosityView", bundle: nil).instantiateViewController(withIdentifier: "GenerosityViewController") as! GenerosityViewController
+        generosityViewController.defaultSelectedSegmentIndex = tipPercentSegmentedControl.selectedSegmentIndex
         self.navigationController?.show(generosityViewController, sender: nil)
     }
     
@@ -32,6 +35,7 @@ class TipperViewController: UIViewController {
     }
     
     let tipperViewModel = TipperViewModel()
+    let defaultBillAmount = Float(0.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +87,11 @@ class TipperViewController: UIViewController {
             return
         }
         tipperViewModel.billAmount = tipperViewModel.getBillAmount(billText: billText)
+        updateGenerosityButton()
+    }
+    
+    private func updateGenerosityButton() {
+        generosityButton.isEnabled = tipperViewModel.billAmount > defaultBillAmount ? true : false
     }
 }
 
