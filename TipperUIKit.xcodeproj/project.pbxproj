@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		521B42F528049CDA00ACB626 /* GenerosityView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B42F428049CDA00ACB626 /* GenerosityView.storyboard */; };
 		521B42F72804BE1200ACB626 /* GenerosityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B42F62804BE1200ACB626 /* GenerosityViewController.swift */; };
+		521B42FD280723E100ACB626 /* GenerosityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B42FC280723E100ACB626 /* GenerosityViewModel.swift */; };
 		524ABB8E27F3B2BA00FF37D5 /* CalculatedAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */; };
 		524ABB9227F3B52000FF37D5 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ABB9127F3B52000FF37D5 /* SwiftUIExtensions.swift */; };
 		529D201427A5889500793317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D201327A5889500793317 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		521B42F428049CDA00ACB626 /* GenerosityView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenerosityView.storyboard; sourceTree = "<group>"; };
 		521B42F62804BE1200ACB626 /* GenerosityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerosityViewController.swift; sourceTree = "<group>"; };
+		521B42FC280723E100ACB626 /* GenerosityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerosityViewModel.swift; sourceTree = "<group>"; };
 		524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedAmountView.swift; sourceTree = "<group>"; };
 		524ABB9127F3B52000FF37D5 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		529D201027A5889500793317 /* TipperUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipperUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				529D204327A6FAB600793317 /* TipperViewModel.swift */,
+				521B42FC280723E100ACB626 /* GenerosityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521B42F72804BE1200ACB626 /* GenerosityViewController.swift in Sources */,
+				521B42FD280723E100ACB626 /* GenerosityViewModel.swift in Sources */,
 				529D201827A5889500793317 /* TipperViewController.swift in Sources */,
 				529D201427A5889500793317 /* AppDelegate.swift in Sources */,
 				524ABB8E27F3B2BA00FF37D5 /* CalculatedAmountView.swift in Sources */,

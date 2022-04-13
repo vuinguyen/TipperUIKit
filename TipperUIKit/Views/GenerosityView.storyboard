@@ -22,16 +22,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awesome-sauce" translatesAutoresizingMaskIntoConstraints="NO" id="OO5-Ec-l49" userLabel="Generosity Image View">
-                                <rect key="frame" x="88.5" y="128" width="237" height="237"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-1" translatesAutoresizingMaskIntoConstraints="NO" id="OO5-Ec-l49" userLabel="Generosity Image View">
+                                <rect key="frame" x="57" y="128" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="FOq-f8-JiK"/>
+                                    <constraint firstAttribute="width" constant="300" id="Mpd-8d-uGe"/>
+                                </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tck-mF-xGp">
-                                <rect key="frame" x="20" y="395" width="374" height="32"/>
+                                <rect key="frame" x="20" y="458" width="374" height="32"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <segments>
-                                    <segment title="Pic 1"/>
-                                    <segment title="Pic 2"/>
-                                    <segment title="Pic 3"/>
+                                    <segment title="Image 1"/>
+                                    <segment title="Image 2"/>
+                                    <segment title="Image 3"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.2627450980392157" green="0.45882352941176469" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </segmentedControl>
@@ -48,6 +52,10 @@
                             <constraint firstItem="OO5-Ec-l49" firstAttribute="top" secondItem="xv0-If-aNq" secondAttribute="bottom" constant="30" id="wde-dq-RuN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="generosityImageView" destination="OO5-Ec-l49" id="IlP-Za-2hG"/>
+                        <outlet property="imageSegmentedControl" destination="tck-mF-xGp" id="h64-wg-Qk9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +63,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="awesome-sauce" width="237" height="237"/>
+        <image name="image-1" width="345.5" height="319.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
