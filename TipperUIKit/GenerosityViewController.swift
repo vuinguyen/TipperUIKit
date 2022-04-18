@@ -17,12 +17,14 @@ class GenerosityViewController: UIViewController {
     @IBOutlet weak var imageSegmentedControl: UISegmentedControl!
     
     var imageSelected = ImageSelected.one
-    var defaultSelectedSegmentIndex: Int?
+    var delegate: GenerosityViewControllerDelegate?
+    var tipPercentage: TipPercent?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let index = defaultSelectedSegmentIndex {
-            imageSegmentedControl.selectedSegmentIndex = index
+        delegate = self
+        if let percentage = tipPercentage {
+            imageSegmentedControl.selectedSegmentIndex = percentage.controlIndex
             imageSelectedChanged()
         }
         configureSegmentedControl()
@@ -43,7 +45,7 @@ class GenerosityViewController: UIViewController {
         default:
             imageSelected = ImageSelected.one
         }
-        imageSelector(self, didFinishSelecting: imageSelected.rawValue)
+        delegate?.imageSelector(self, didFinishSelecting: imageSelected.rawValue)
     }
 }
 

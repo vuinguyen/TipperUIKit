@@ -20,7 +20,7 @@ class TipperViewController: UIViewController {
     
     @IBAction func displayGenerosityLevel(_ sender: Any) {
         let generosityViewController = UIStoryboard(name: "GenerosityView", bundle: nil).instantiateViewController(withIdentifier: "GenerosityViewController") as! GenerosityViewController
-        generosityViewController.defaultSelectedSegmentIndex = tipPercentSegmentedControl.selectedSegmentIndex
+        generosityViewController.tipPercentage = tipperViewModel.tipPercent
         self.navigationController?.show(generosityViewController, sender: nil)
     }
     
