@@ -16,6 +16,9 @@ class TipperViewController: UIViewController {
     @IBOutlet var tipPercentLabel: UILabel!
     @IBOutlet var tipPercentSegmentedControl: UISegmentedControl!
 
+    @IBOutlet var paidByLabel: UILabel!
+    @IBOutlet var payButton: UIButton!
+
     // Use SwiftUI view to display the tip amount
     @IBSegueAction func tipAmountView(_ coder: NSCoder) -> UIViewController? {
         UIHostingController(coder: coder, rootView: CalculatedAmountView(viewModel: tipperViewModel, calculatedAmountType: CalculatedAmountType.tipAmount))
