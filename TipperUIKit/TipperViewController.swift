@@ -28,7 +28,11 @@ class TipperViewController: UIViewController {
     @IBSegueAction func billTotalView(_ coder: NSCoder) -> UIViewController? {
         UIHostingController(coder: coder, rootView: CalculatedAmountView(viewModel: tipperViewModel, calculatedAmountType: CalculatedAmountType.billTotal))
     }
-    
+
+    @IBSegueAction func paymentView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: PaymentView())
+    }
+
     let tipperViewModel = TipperViewModel()
 
     override func viewDidLoad() {

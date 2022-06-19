@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524035C6285691CC00A68050 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524035C5285691CC00A68050 /* PaymentView.swift */; };
 		524ABB8E27F3B2BA00FF37D5 /* CalculatedAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */; };
 		524ABB9227F3B52000FF37D5 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ABB9127F3B52000FF37D5 /* SwiftUIExtensions.swift */; };
 		529D201427A5889500793317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D201327A5889500793317 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		524035C5285691CC00A68050 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedAmountView.swift; sourceTree = "<group>"; };
 		524ABB9127F3B52000FF37D5 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		529D201027A5889500793317 /* TipperUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipperUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				524ABB8D27F3B2BA00FF37D5 /* CalculatedAmountView.swift */,
+				524035C5285691CC00A68050 /* PaymentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				529D201827A5889500793317 /* TipperViewController.swift in Sources */,
 				529D201427A5889500793317 /* AppDelegate.swift in Sources */,
 				524ABB8E27F3B2BA00FF37D5 /* CalculatedAmountView.swift in Sources */,
+				524035C6285691CC00A68050 /* PaymentView.swift in Sources */,
 				524ABB9227F3B52000FF37D5 /* SwiftUIExtensions.swift in Sources */,
 				529D204427A6FAB600793317 /* TipperViewModel.swift in Sources */,
 				529D201627A5889500793317 /* SceneDelegate.swift in Sources */,

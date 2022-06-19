@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p0Y-zc-qp7">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2GG-r0-e1g" userLabel="Top Section Stack View">
-                                <rect key="frame" x="20" y="0.0" width="280" height="224"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2GG-r0-e1g" userLabel="Top Section Stack View">
+                                <rect key="frame" x="20" y="58.5" width="280" height="209"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qd1-Fh-e9h" userLabel="Bill Amount Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="102"/>
@@ -43,7 +43,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4ui-68-Mxj" userLabel="Tip Percent Stack View">
-                                        <rect key="frame" x="0.0" y="142" width="280" height="82"/>
+                                        <rect key="frame" x="0.0" y="127" width="280" height="82"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-Rs-2JM">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="31"/>
@@ -79,7 +79,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-PK-A4e" userLabel="Tip Amount View">
-                                <rect key="frame" x="0.0" y="254" width="320" height="75"/>
+                                <rect key="frame" x="0.0" y="292.5" width="320" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-7J-APz" userLabel="Tip Amount Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
@@ -104,7 +104,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Qx-6Ek" userLabel="Bill Total View">
-                                <rect key="frame" x="0.0" y="329" width="320" height="75"/>
+                                <rect key="frame" x="0.0" y="367.5" width="320" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-ly-Jl2" userLabel="Bill Total Stack View">
                                         <rect key="frame" x="0.0" y="-26.5" width="320" height="128"/>
@@ -128,19 +128,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-Gr-XK3" userLabel="Divider View">
-                                <rect key="frame" x="5" y="328" width="310" height="1"/>
+                                <rect key="frame" x="5" y="366.5" width="310" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="2E7-Pz-5kk"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gv-8C-uS4">
-                                <rect key="frame" x="136.5" y="434" width="47.5" height="31"/>
+                                <rect key="frame" x="136.5" y="467.5" width="47.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Pay"/>
+                                <connections>
+                                    <segue destination="ZEX-kg-BEv" kind="show" destinationCreationSelector="paymentView:" id="rer-xH-mNv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid By: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8C-mv-z85">
-                                <rect key="frame" x="127" y="495" width="66" height="20.5"/>
+                                <rect key="frame" x="127" y="523.5" width="66" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -150,7 +153,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v8C-mv-z85" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1A7-DL-up3"/>
-                            <constraint firstItem="9gf-PK-A4e" firstAttribute="top" secondItem="2GG-r0-e1g" secondAttribute="bottom" constant="30" id="2t5-xQ-dMm"/>
+                            <constraint firstItem="9gf-PK-A4e" firstAttribute="top" secondItem="2GG-r0-e1g" secondAttribute="bottom" constant="25" id="2t5-xQ-dMm"/>
                             <constraint firstAttribute="trailing" secondItem="Nn1-Gr-XK3" secondAttribute="trailing" constant="5" id="DOe-6j-nru"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gf-PK-A4e" secondAttribute="trailing" id="O98-Gl-4ZK"/>
                             <constraint firstItem="Nn1-Gr-XK3" firstAttribute="top" secondItem="9gf-PK-A4e" secondAttribute="bottom" constant="-1" id="PsJ-Nt-6zB"/>
@@ -160,13 +163,14 @@
                             <constraint firstItem="jqa-Qx-6Ek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zd3-ov-X0U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2GG-r0-e1g" secondAttribute="trailing" constant="20" id="hiG-g9-S1a"/>
                             <constraint firstItem="Nn1-Gr-XK3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="iOy-aa-1nY"/>
-                            <constraint firstItem="v8C-mv-z85" firstAttribute="top" secondItem="9gv-8C-uS4" secondAttribute="bottom" constant="30" id="j89-1U-qsB"/>
-                            <constraint firstItem="9gv-8C-uS4" firstAttribute="top" secondItem="jqa-Qx-6Ek" secondAttribute="bottom" constant="30" id="jJI-87-zpM"/>
+                            <constraint firstItem="v8C-mv-z85" firstAttribute="top" secondItem="9gv-8C-uS4" secondAttribute="bottom" constant="25" id="j89-1U-qsB"/>
+                            <constraint firstItem="9gv-8C-uS4" firstAttribute="top" secondItem="jqa-Qx-6Ek" secondAttribute="bottom" constant="25" id="jJI-87-zpM"/>
                             <constraint firstItem="9gf-PK-A4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pRu-Ee-MHm"/>
                             <constraint firstItem="9gv-8C-uS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPW-Vz-mD3"/>
                             <constraint firstItem="jqa-Qx-6Ek" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t8f-M1-KFH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lGp-I5-lYN"/>
                     <connections>
                         <outlet property="billAmountLabel" destination="OIa-Be-JqN" id="QQ2-b4-Ant"/>
                         <outlet property="billAmountTextField" destination="b9g-U1-EaI" id="oqE-Wo-YNe"/>
@@ -178,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="99.776785714285708"/>
+            <point key="canvasLocation" x="1117.5" y="99.295774647887328"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="W8v-2Q-m2m">
@@ -193,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-Tf-3QC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="70"/>
+            <point key="canvasLocation" x="2051.25" y="-273.06338028169017"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="83s-W3-dFN">
@@ -208,7 +212,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-EB-Epq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="240"/>
+            <point key="canvasLocation" x="2051.25" y="-80.281690140845072"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="uRh-zZ-0js">
+            <objects>
+                <hostingController id="ZEX-kg-BEv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CmV-6d-PVo"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WV-bH-kGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041.875" y="363.38028169014086"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sUC-gX-b9n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p0Y-zc-qp7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5pL-j7-jov">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qKS-4C-GK9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3i-tn-3Xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="99.295774647887328"/>
         </scene>
     </scenes>
     <resources>
