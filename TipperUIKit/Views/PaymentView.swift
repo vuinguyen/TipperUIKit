@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PaymentView: View {
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var viewModel: TipperViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 20.0) {
@@ -21,13 +22,19 @@ struct PaymentView: View {
             Text("How would you like to pay?")
                 .primaryStyle()
             HStack(alignment: .center, spacing: 25.0) {
-                Button("Credit") {
+                Button(PaymentMethod.credit.description) {
+                    viewModel.paymentMethod = .credit
+                    print("paymentMethod is: \(viewModel.paymentMethod?.description)")
                     presentationMode.wrappedValue.dismiss()
                 }
-                Button("Apple Pay") {
+                Button(PaymentMethod.applepay.description) {
+                    viewModel.paymentMethod = .applepay
+                    print("paymentMethod is: \(viewModel.paymentMethod?.description)")
                     presentationMode.wrappedValue.dismiss()
                 }
-                Button("Cash") {
+                Button(PaymentMethod.cash.description) {
+                    viewModel.paymentMethod = .cash
+                    print("paymentMethod is: \(viewModel.paymentMethod?.description)")
                     presentationMode.wrappedValue.dismiss()
                 }
             }   // end button HStack
@@ -37,6 +44,6 @@ struct PaymentView: View {
 
 struct PaymentView_Previews: PreviewProvider {
     static var previews: some View {
-        PaymentView()
+        PaymentView(viewModel: TipperViewModel())
     }
 }

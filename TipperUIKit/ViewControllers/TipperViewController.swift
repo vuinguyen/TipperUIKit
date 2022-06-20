@@ -30,7 +30,7 @@ class TipperViewController: UIViewController {
     }
 
     @IBSegueAction func paymentView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: PaymentView())
+        return UIHostingController(coder: coder, rootView: PaymentView(viewModel: tipperViewModel))
     }
 
     let tipperViewModel = TipperViewModel()
@@ -41,6 +41,10 @@ class TipperViewController: UIViewController {
         configureFonts()
         configureSegmentedControl()
         configureTextField()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        updatePaymentMethodDisplay()
     }
 
     private func configureFonts() {
@@ -85,6 +89,16 @@ class TipperViewController: UIViewController {
             return
         }
         tipperViewModel.billAmount = tipperViewModel.getBillAmount(billText: billText)
+        updatePaymentMethodDisplay()
+    }
+
+    private func updatePaymentMethodDisplay() {
+        guard tipperViewModel.paymentMethod != nil,
+              let paymentDescription = tipperViewModel.paymentMethod?.description else {
+            paidByLabel.text = "Paid By:"
+            return
+        }
+        paidByLabel.text =  "Paid By: \(paymentDescription)"
     }
 }
 

@@ -65,6 +65,8 @@ enum PayState: String {
 class TipperViewModel: ObservableObject {
     @Published var tipPercent: TipPercent = .fifteen
     @Published var billAmount = Float(0.0)
+    @Published var paymentMethod: PaymentMethod?
+    @Published var payState: PayState = .notpaid
     
     let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
