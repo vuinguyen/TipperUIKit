@@ -38,11 +38,28 @@ enum TipPercent: Float, segmentedControl {
             return 2
         }
     }
+
+    var image: String {
+        switch self {
+        case .fifteen:
+            return "Image-15percent"
+        case .twenty:
+            return "Image-20percent"
+        case .twentyfive:
+            return "Image-25percent"
+        }
+    }
 }
 
 enum CalculatedAmountType: String {
     case tipAmount = "Tip Amount"
     case billTotal = "Bill Total"
+}
+
+enum PayState: String {
+    case notpaid = "Not Paid"
+    case paying = "Paying"
+    case paid = "Paid"
 }
 
 class TipperViewModel: ObservableObject {

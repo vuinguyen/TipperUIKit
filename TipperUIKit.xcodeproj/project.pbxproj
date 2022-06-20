@@ -20,6 +20,7 @@
 		529D203527A5889600793317 /* TipperUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D203427A5889600793317 /* TipperUIKitUITests.swift */; };
 		529D203727A5889600793317 /* TipperUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D203627A5889600793317 /* TipperUIKitUITestsLaunchTests.swift */; };
 		529D204427A6FAB600793317 /* TipperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D204327A6FAB600793317 /* TipperViewModel.swift */; };
+		52BB4312285FEF4F0012D383 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB4311285FEF4F0012D383 /* PaymentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		529D203427A5889600793317 /* TipperUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperUIKitUITests.swift; sourceTree = "<group>"; };
 		529D203627A5889600793317 /* TipperUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		529D204327A6FAB600793317 /* TipperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperViewModel.swift; sourceTree = "<group>"; };
+		52BB4311285FEF4F0012D383 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,11 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				524ABB8C27F3B28E00FF37D5 /* Views */,
+				52BB430F285FEE690012D383 /* ViewControllers */,
+				52BB4310285FEEAA0012D383 /* ViewModels */,
 				524ABB8F27F3B4BC00FF37D5 /* Extensions */,
 				529D201327A5889500793317 /* AppDelegate.swift */,
 				529D201527A5889500793317 /* SceneDelegate.swift */,
-				529D204327A6FAB600793317 /* TipperViewModel.swift */,
-				529D201727A5889500793317 /* TipperViewController.swift */,
 				529D201927A5889500793317 /* Main.storyboard */,
 				529D201C27A5889600793317 /* Assets.xcassets */,
 				529D201E27A5889600793317 /* LaunchScreen.storyboard */,
@@ -153,6 +155,23 @@
 				529D203627A5889600793317 /* TipperUIKitUITestsLaunchTests.swift */,
 			);
 			path = TipperUIKitUITests;
+			sourceTree = "<group>";
+		};
+		52BB430F285FEE690012D383 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				529D201727A5889500793317 /* TipperViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52BB4310285FEEAA0012D383 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				529D204327A6FAB600793317 /* TipperViewModel.swift */,
+				52BB4311285FEF4F0012D383 /* PaymentViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +308,7 @@
 				529D201827A5889500793317 /* TipperViewController.swift in Sources */,
 				529D201427A5889500793317 /* AppDelegate.swift in Sources */,
 				524ABB8E27F3B2BA00FF37D5 /* CalculatedAmountView.swift in Sources */,
+				52BB4312285FEF4F0012D383 /* PaymentViewModel.swift in Sources */,
 				524035C6285691CC00A68050 /* PaymentView.swift in Sources */,
 				524ABB9227F3B52000FF37D5 /* SwiftUIExtensions.swift in Sources */,
 				529D204427A6FAB600793317 /* TipperViewModel.swift in Sources */,
