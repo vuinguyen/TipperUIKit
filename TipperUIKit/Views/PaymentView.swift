@@ -22,7 +22,7 @@ struct PaymentView: View {
         VStack(alignment: .center, spacing: 20.0) {
             Text("Thanks for the tip!")
                 .primaryStyle()
-            Image("Image-15percent")
+            Image(viewModel.tipPercent.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(EdgeInsets(top: 0.0, leading: 40.0, bottom: 0.0, trailing: 40.0))
