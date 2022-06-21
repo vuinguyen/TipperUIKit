@@ -34,6 +34,8 @@ class TipperViewController: UIViewController {
     }
 
     let tipperViewModel = TipperViewModel()
+    let defaultBillAmount = Float(0.0)
+    var previousBillAmount = Float(0.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +46,7 @@ class TipperViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        updatePaymentMethodDisplay()
+        updatePaySection()
     }
 
     private func configureFonts() {
@@ -82,17 +84,31 @@ class TipperViewController: UIViewController {
     // that will automatically update the Tip Amount and Bill Total displays
     // through CalculatedAmountView
     private func updateDisplay() {
-        // get bill amount value from textfield
-        guard let billText = billAmountTextField.text,
-        billText != "",
-        billText != "." else {
+        guard let billText = getBillText() else {
             return
         }
+
         tipperViewModel.billAmount = tipperViewModel.getBillAmount(billText: billText)
-        updatePaymentMethodDisplay()
+        tipperViewModel.payState =
+            (tipperViewModel.billAmount == defaultBillAmount) ? .notpaid : .paying
+        previousBillAmount = tipperViewModel.getBillAmount(billText: billText)
+        updatePaySection()
     }
 
-    private func updatePaymentMethodDisplay() {
+    private func getBillText() -> String? {
+        guard let billText = billAmountTextField.text,
+           billText != "",
+           billText != "." else {
+               return nil
+           }
+        return billText
+    }
+
+    private func updatePaySection() {
+        payButton.isEnabled = tipperViewModel.payState == .paying ? true : false
+        print("payState is: \(tipperViewModel.payState)")
+        paidByLabel.isHidden = tipperViewModel.payState != .paid ? true : false
+
         guard tipperViewModel.paymentMethod != nil,
               let paymentDescription = tipperViewModel.paymentMethod?.description else {
             paidByLabel.text = "Paid By:"
@@ -105,7 +121,12 @@ class TipperViewController: UIViewController {
 extension TipperViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         print("Typing: \(String(describing: textField.text))")
-        updateDisplay()
+        guard let billText = getBillText() else {
+            return
+        }
+        if tipperViewModel.getBillAmount(billText: billText) != previousBillAmount {
+            updateDisplay()
+        }
     }
 }
 

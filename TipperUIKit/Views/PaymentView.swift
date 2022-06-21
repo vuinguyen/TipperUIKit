@@ -11,6 +11,13 @@ struct PaymentView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: TipperViewModel
 
+    func selectPayment(paymentMethod: PaymentMethod = .credit) {
+        viewModel.paymentMethod = paymentMethod
+        viewModel.payState = .paid
+        print("paymentMethod is: \(String(describing: viewModel.paymentMethod?.description))")
+        presentationMode.wrappedValue.dismiss()
+    }
+
     var body: some View {
         VStack(alignment: .center, spacing: 20.0) {
             Text("Thanks for the tip!")
@@ -23,19 +30,13 @@ struct PaymentView: View {
                 .primaryStyle()
             HStack(alignment: .center, spacing: 25.0) {
                 Button(PaymentMethod.credit.description) {
-                    viewModel.paymentMethod = .credit
-                    print("paymentMethod is: \(viewModel.paymentMethod?.description)")
-                    presentationMode.wrappedValue.dismiss()
+                    selectPayment(paymentMethod: .credit)
                 }
                 Button(PaymentMethod.applepay.description) {
-                    viewModel.paymentMethod = .applepay
-                    print("paymentMethod is: \(viewModel.paymentMethod?.description)")
-                    presentationMode.wrappedValue.dismiss()
+                    selectPayment(paymentMethod: .applepay)
                 }
                 Button(PaymentMethod.cash.description) {
-                    viewModel.paymentMethod = .cash
-                    print("paymentMethod is: \(viewModel.paymentMethod?.description)")
-                    presentationMode.wrappedValue.dismiss()
+                    selectPayment(paymentMethod: .cash)
                 }
             }   // end button HStack
         }   // end VStack
