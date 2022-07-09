@@ -25,9 +25,8 @@ struct CalculatedAmountView: View {
             Spacer(minLength: 100)
             Text(amount)
                 .font(.title2)
-                .fontWeight(.bold)
-            // Color in hex #323A56
-                .foregroundColor(Color(red: 0.19607843137254902, green: 0.22745098039215686, blue: 0.33725490196078434))
+                .fontWeight(.heavy)
+                .foregroundColor(Color.blue)
             Spacer()
                 .frame(width: 20)
         }
