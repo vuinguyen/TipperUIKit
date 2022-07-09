@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TipperViewController: UIViewController {
 
@@ -20,6 +21,13 @@ class TipperViewController: UIViewController {
 
     @IBOutlet var billTotalTextLabel: UILabel!
     @IBOutlet var billTotalValueLabel: UILabel!
+
+    @IBOutlet var paidByLabel: UILabel!
+    @IBOutlet var payButton: UIButton!
+
+    @IBSegueAction func paymentView(_ coder: NSCoder) -> UIViewController? {
+        return nil
+    }
 
     var tipPercent: TipPercent = .fifteen
     let tipperViewModel = TipperViewModel()
