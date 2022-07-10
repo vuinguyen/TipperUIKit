@@ -83,11 +83,7 @@ class TipperViewController: UIViewController {
     }
 
     private func updateDisplay() {
-        // get bill amount value from textfield
-        guard let billText = billAmountTextField.text,
-        billText != "",
-        billText != "." else {
-            clearDisplay()
+        guard let billText = getBillText() else {
             return
         }
         let billAmount = tipperViewModel.getBillAmount(billText: billText)
@@ -118,6 +114,17 @@ class TipperViewController: UIViewController {
         billTotalValueLabel.text = "$0.00"
     }
 
+    // get bill amount value from textfield
+    private func getBillText() -> String? {
+        guard let billText = billAmountTextField.text,
+        billText != "",
+        billText != "." else {
+            clearDisplay()
+            return nil
+        }
+        return billText
+    }
+
     private func updatePaySection() {
         payButton.isEnabled = tipperViewModel.payState == .paying ? true : false
         print("payState is: \(tipperViewModel.payState)")
@@ -135,10 +142,7 @@ class TipperViewController: UIViewController {
 extension TipperViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         print("Typing: \(String(describing: textField.text))")
-        guard let billText = billAmountTextField.text,
-        billText != "",
-        billText != "." else {
-            clearDisplay()
+        guard let billText = getBillText() else {
             return
         }
         if tipperViewModel.getBillAmount(billText: billText) != previousBillAmount {
