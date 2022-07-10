@@ -26,11 +26,13 @@ class TipperViewController: UIViewController {
     @IBOutlet var payButton: UIButton!
 
     @IBSegueAction func paymentView(_ coder: NSCoder) -> UIViewController? {
-        return nil
+        return UIHostingController(coder: coder, rootView: PaymentView(viewModel: tipperViewModel))
     }
 
     var tipPercent: TipPercent = .fifteen
     let tipperViewModel = TipperViewModel()
+    let defaultBillAmount = Float(0.0)
+    var previousBillAmount = Float(0.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,10 @@ class TipperViewController: UIViewController {
         configureFonts()
         configureSegmentedControl()
         configureTextField()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        updatePaySection()
     }
 
     private func configureFonts() {
@@ -98,11 +104,25 @@ class TipperViewController: UIViewController {
 
         // display bill total
         billTotalValueLabel.text = tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billAmount)
+        updatePaySection()
     }
 
     private func clearDisplay() {
         tipAmountValueLabel.text = "$0.00"
         billTotalValueLabel.text = "$0.00"
+    }
+
+    private func updatePaySection() {
+        payButton.isEnabled = tipperViewModel.payState == .paying ? true : false
+        print("payState is: \(tipperViewModel.payState)")
+        paidByLabel.isHidden = tipperViewModel.payState != .paid ? true : false
+
+        guard tipperViewModel.paymentMethod != nil,
+              let paymentDescription = tipperViewModel.paymentMethod?.description else {
+            paidByLabel.text = "Paid By:"
+            return
+        }
+        paidByLabel.text =  "Paid By: \(paymentDescription)"
     }
 }
 

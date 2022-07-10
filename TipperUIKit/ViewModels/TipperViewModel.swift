@@ -38,9 +38,31 @@ enum TipPercent: Float, segmentedControl {
             return 2
         }
     }
+
+    var image: String {
+        switch self {
+        case .fifteen:
+            return "Image-15percent"
+        case .twenty:
+            return "Image-20percent"
+        case .twentyfive:
+            return "Image-25percent"
+        }
+    }
 }
 
-class TipperViewModel {
+enum PayState: String {
+    case notpaid = "Not Paid"
+    case paying = "Paying"
+    case paid = "Paid"
+}
+
+class TipperViewModel: ObservableObject {
+    @Published var tipPercent: TipPercent = .fifteen
+    @Published var billAmount = Float(0.0)
+    @Published var paymentMethod: PaymentMethod?
+    @Published var payState: PayState = .notpaid
+
     let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
         formatter.numberStyle = .currency

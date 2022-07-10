@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5213F923287A4555008A9DE1 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213F922287A4555008A9DE1 /* SwiftUIExtensions.swift */; };
+		5213F925287A45C6008A9DE1 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213F924287A45C6008A9DE1 /* PaymentViewModel.swift */; };
+		5213F927287A4622008A9DE1 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213F926287A4622008A9DE1 /* PaymentView.swift */; };
 		529D201427A5889500793317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D201327A5889500793317 /* AppDelegate.swift */; };
 		529D201627A5889500793317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D201527A5889500793317 /* SceneDelegate.swift */; };
 		529D201827A5889500793317 /* TipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D201727A5889500793317 /* TipperViewController.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5213F922287A4555008A9DE1 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
+		5213F924287A45C6008A9DE1 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		5213F926287A4622008A9DE1 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		529D201027A5889500793317 /* TipperUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipperUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D201327A5889500793317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529D201527A5889500793317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5213F91E287A3B6E008A9DE1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5213F922287A4555008A9DE1 /* SwiftUIExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5213F91F287A3C19008A9DE1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				529D201727A5889500793317 /* TipperViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5213F920287A3C29008A9DE1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				529D204327A6FAB600793317 /* TipperViewModel.swift */,
+				5213F924287A45C6008A9DE1 /* PaymentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5213F921287A3C39008A9DE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5213F926287A4622008A9DE1 /* PaymentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		529D200727A5889500793317 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +140,12 @@
 		529D201227A5889500793317 /* TipperUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5213F91E287A3B6E008A9DE1 /* Extensions */,
+				5213F91F287A3C19008A9DE1 /* ViewControllers */,
+				5213F920287A3C29008A9DE1 /* ViewModels */,
+				5213F921287A3C39008A9DE1 /* Views */,
 				529D201327A5889500793317 /* AppDelegate.swift */,
 				529D201527A5889500793317 /* SceneDelegate.swift */,
-				529D204327A6FAB600793317 /* TipperViewModel.swift */,
-				529D201727A5889500793317 /* TipperViewController.swift */,
 				529D201927A5889500793317 /* Main.storyboard */,
 				529D201C27A5889600793317 /* Assets.xcassets */,
 				529D201E27A5889600793317 /* LaunchScreen.storyboard */,
@@ -261,7 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5213F923287A4555008A9DE1 /* SwiftUIExtensions.swift in Sources */,
+				5213F925287A45C6008A9DE1 /* PaymentViewModel.swift in Sources */,
 				529D201827A5889500793317 /* TipperViewController.swift in Sources */,
+				5213F927287A4622008A9DE1 /* PaymentView.swift in Sources */,
 				529D201427A5889500793317 /* AppDelegate.swift in Sources */,
 				529D204427A6FAB600793317 /* TipperViewModel.swift in Sources */,
 				529D201627A5889500793317 /* SceneDelegate.swift in Sources */,
