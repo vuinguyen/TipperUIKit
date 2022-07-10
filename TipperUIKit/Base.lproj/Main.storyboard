@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Fr-NP-3Ax">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2GG-r0-e1g" userLabel="Top Section Stack View">
-                                <rect key="frame" x="20" y="0.0" width="335" height="224"/>
+                                <rect key="frame" x="20" y="58.5" width="335" height="224"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qd1-Fh-e9h" userLabel="Bill Amount Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="102"/>
@@ -79,7 +79,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-PK-A4e" userLabel="Tip Amount View">
-                                <rect key="frame" x="0.0" y="254" width="375" height="72.5"/>
+                                <rect key="frame" x="0.0" y="312.5" width="375" height="72.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-7J-APz" userLabel="Tip Amount Stack View">
                                         <rect key="frame" x="20" y="0.0" width="335" height="72.5"/>
@@ -110,7 +110,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Qx-6Ek" userLabel="Bill Total View">
-                                <rect key="frame" x="0.0" y="326.5" width="375" height="72.5"/>
+                                <rect key="frame" x="0.0" y="385" width="375" height="72.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-ly-Jl2" userLabel="Bill Total Stack View">
                                         <rect key="frame" x="20" y="22" width="335" height="29"/>
@@ -140,14 +140,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-Gr-XK3" userLabel="Divider View">
-                                <rect key="frame" x="5" y="325.5" width="365" height="1"/>
+                                <rect key="frame" x="5" y="384" width="365" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="2E7-Pz-5kk"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47G-q1-0LF">
-                                <rect key="frame" x="164" y="419" width="47.5" height="31"/>
+                                <rect key="frame" x="164" y="477.5" width="47.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Pay"/>
                                 <connections>
@@ -155,7 +155,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ny-W6-sFM">
-                                <rect key="frame" x="157" y="460" width="61.5" height="20.5"/>
+                                <rect key="frame" x="157" y="518.5" width="61.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,6 +182,7 @@
                             <constraint firstItem="jqa-Qx-6Ek" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t8f-M1-KFH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="j72-FA-Zgj"/>
                     <connections>
                         <outlet property="billAmountLabel" destination="OIa-Be-JqN" id="QQ2-b4-Ant"/>
                         <outlet property="billAmountTextField" destination="b9g-U1-EaI" id="oqE-Wo-YNe"/>
@@ -197,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="99.776785714285708"/>
+            <point key="canvasLocation" x="1060" y="99.400299850074973"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="bgo-N7-BTA">
@@ -207,7 +208,25 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwz-5S-ccr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="99"/>
+            <point key="canvasLocation" x="1822" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nME-lk-Q4m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Fr-NP-3Ax" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xt2-WY-eT0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NBx-r1-1Mb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lro-9d-a20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="99"/>
         </scene>
     </scenes>
     <resources>
