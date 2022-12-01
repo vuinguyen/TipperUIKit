@@ -4,6 +4,8 @@ A tipping calculator developed in UIKit.
 
 Project was built for a 360iDev talk I gave on building hybrid UI apps (mixing SwiftUI and UIKit in the same iOS app).
 
+[Recording of my 360iDev talk on building hybrid UI apps](https://youtu.be/y7xAR0VBBGM)
+
 [Slides for my talk](https://www.slideshare.net/vui_nguyen/when-you-cant-go-all-in-on-swiftui-build-a-hybrid-ui-app-instead)
 
 ### Before
